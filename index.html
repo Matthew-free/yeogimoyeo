@@ -11,7 +11,7 @@
     header { padding:24px 22px 16px; display:flex; justify-content:space-between; align-items:center; }
     .brand { font-size:24px; font-weight:900; letter-spacing:-1.5px; white-space:nowrap; flex-shrink:0; } .brand span { color:var(--blue); }
     .avatar { width:36px;height:36px;border-radius:50%;background:#eef1ff;display:grid;place-items:center;font-weight:800;color:var(--blue); }
-    .login-link { border:0;background:none;color:var(--blue);font-size:13px;font-weight:850;cursor:pointer;margin:0;padding:8px; }
+    .login-link { width:52px;height:52px;border:0;border-radius:50%;background:#eef1ff;color:var(--blue);font-size:11px;line-height:1.1;font-weight:850;cursor:pointer;margin:0 0 0 auto;padding:5px;display:grid;place-items:center;overflow:hidden;white-space:nowrap; }
     main { padding:0 18px 32px; } .eyebrow { color:var(--blue); font-weight:800; font-size:13px; margin-top:8px; }
     h1 { font-size:30px; line-height:1.15; letter-spacing:-1.8px; margin:8px 0 20px; }
     .hero { background:linear-gradient(135deg,#edf2ff,#f5f7ff); border-radius:24px; padding:20px; margin-bottom:16px; }
@@ -44,7 +44,7 @@
   </style>
 </head>
 <body><div class="app">
-  <header><div class="brand"><span>여기</span>모여</div><button class="login-link hidden" id="loginOpen">로그인하러가기</button></header>
+  <header><div class="brand"><span>여기</span>모여</div><button class="login-link hidden" id="loginOpen" aria-label="내 프로필">나</button></header>
   <main id="authScreen" class="auth-screen"><div class="auth-card">
     <div id="authChoice"><div class="eyebrow">여기모여 시작하기</div><h1>로그인하고<br>모임을 만들어보세요</h1><p>로그인하면 모임과 일행 정보를 안전하게 저장할 수 있어요.</p><button class="auth-choice" id="loginChoose">로그인</button><button class="auth-choice" id="signupChoose">회원가입</button></div>
     <div id="authForms" class="hidden"><div class="auth-tabs"><button class="auth-tab active" id="loginTab">로그인</button><button class="auth-tab" id="signupTab">회원가입</button></div><div id="loginForm"><h1>다시 만나요</h1><p>이메일과 비밀번호로 로그인하세요.</p><div class="field"><label>이메일</label><input id="loginEmail" type="email" placeholder="example@email.com" /></div><div class="field"><label>비밀번호</label><input id="loginPassword" type="password" placeholder="비밀번호를 입력하세요" /></div><button id="loginSubmit">로그인하기</button></div><div id="signupForm" class="hidden"><h1>여기모여 시작하기</h1><p>가입 후 모임을 만들고 일행을 초대해보세요.</p><div class="field"><label>이름</label><input id="signupName" placeholder="이름을 입력하세요" /></div><div class="field"><label>이메일</label><input id="signupEmail" type="email" placeholder="example@email.com" /></div><div class="field"><label>비밀번호</label><input id="signupPassword" type="password" placeholder="8자 이상 입력하세요" /></div><button id="signupSubmit">회원가입하기</button></div></div>
